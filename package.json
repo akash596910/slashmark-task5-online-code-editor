@@ -1,0 +1,13 @@
+{
+  "name": "slashmark-task5-online-code-editor",
+  "version": "1.0.0",
+  "description": "Interactive Web-based Code Editor and Live Compiler built for Slash Mark Internship",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5"
+  }
+}
