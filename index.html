@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevStudio | Web IDE & Live Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="ide-header">
+        <div class="logo">
+            <i class="fa-solid fa-code"></i> DevStudio <span>IDE</span>
+        </div>
+        <div class="header-controls">
+            <button id="runBtn" class="btn btn-run"><i class="fa-solid fa-play"></i> Run Code</button>
+            <button id="clearBtn" class="btn btn-clear"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+        </div>
+    </header>
+
+    <main class="ide-container">
+        <!-- Editor Left Pane -->
+        <section class="editor-pane">
+            <div class="editor-tabs">
+                <button class="tab-btn active" data-tab="html"><i class="fa-brands fa-html5"></i> HTML</button>
+                <button class="tab-btn" data-tab="css"><i class="fa-brands fa-css3-alt"></i> CSS</button>
+                <button class="tab-btn" data-tab="js"><i class="fa-brands fa-js"></i> JavaScript</button>
+            </div>
+
+            <div class="editor-windows">
+                <textarea id="htmlCode" class="code-area active" placeholder="<!-- Write HTML here -->">
+<div class="demo-card">
+  <h2>Hello from DevStudio IDE! 🚀</h2>
+  <p>Live, responsive in-browser code editor.</p>
+  <button onclick="showAlert()">Click Me</button>
+</div></textarea>
+
+                <textarea id="cssCode" class="code-area" placeholder="/* Write CSS here */">
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: #0f172a;
+  color: #fff;
+}
+.demo-card {
+  background: #1e293b;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #38bdf8;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}</textarea>
+
+                <textarea id="jsCode" class="code-area" placeholder="// Write JavaScript here">
+function showAlert() {
+  alert('Code compiled & executed successfully inside DevStudio!');
+}</textarea>
+            </div>
+        </section>
+
+        <!-- Preview Right Pane -->
+        <section class="preview-pane">
+            <div class="preview-header">
+                <i class="fa-solid fa-desktop"></i> Live Output Screen
+            </div>
+            <iframe id="outputFrame" sandbox="allow-scripts allow-modals"></iframe>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
