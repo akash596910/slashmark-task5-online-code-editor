@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0b0f19;
+    color: #e2e8f0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.ide-header {
+    background: #111827;
+    border-bottom: 1px solid #1f2937;
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+.btn {
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: 0.2s ease;
+}
+
+.btn-run {
+    background: #0284c7;
+    color: #fff;
+}
+
+.btn-run:hover {
+    background: #0369a1;
+}
+
+.btn-clear {
+    background: #374151;
+    color: #d1d5db;
+    margin-left: 0.5rem;
+}
+
+.btn-clear:hover {
+    background: #4b5563;
+}
+
+.ide-container {
+    flex: 1;
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+.editor-pane {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #1f2937;
+    background: #0d1117;
+}
+
+.editor-tabs {
+    display: flex;
+    background: #161b22;
+    border-bottom: 1px solid #21262d;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #8b949e;
+    padding: 0.75rem 1.4rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-btn.active {
+    color: #38bdf8;
+    background: #0d1117;
+    border-bottom: 2px solid #38bdf8;
+}
+
+.editor-windows {
+    flex: 1;
+    position: relative;
+}
+
+.code-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0d1117;
+    color: #c9d1d9;
+    font-family: 'Consolas', 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    padding: 1.2rem;
+    border: none;
+    outline: none;
+    resize: none;
+    line-height: 1.6;
+    display: none;
+}
+
+.code-area.active {
+    display: block;
+}
+
+.preview-pane {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+}
+
+.preview-header {
+    background: #1e293b;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#outputFrame {
+    flex: 1;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+}
